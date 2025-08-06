@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Divs Practice</title>
+    <style>
+      .red-square {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        margin: 20px; /* Center the square horizontally */
+      }
+      .green-circle {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        border-radius: 50%; /* Makes the div a circle */
+        margin: 20px; /* Center the circle horizontally */
+      }
+      /*Ex.9d*/
+      .install-YT-music {
+        width: 380px;
+        height: auto;
+        background-color: rgb(39, 39, 39);
+        padding: 20px;
+        text-align: left;
+        margin: 20px;
+      }
+      .install-YT-music .Header1 {
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        color: white;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .install-YT-music .Header2 {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: white;
+        margin-bottom: 10px;
+      }
+
+      /*Ex.9f*/
+      .profile-card-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the cards horizontally */
+      }
+      .profile-card {
+        display: inline-block;
+        vertical-align: top;
+        width: 150px;
+        background-color: white;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        text-align: left;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-bottom: 8px;
+      }
+      .profile-card .thumbnail {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-bottom: 8px;
+      }
+      .profile-card .Header1 {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        padding-left: 8px;
+        color: black;
+        font-style: bold;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        text-align: left;
+      } 
+      .profile-card .Header2 {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        padding-left: 8px;
+        color: gray;
+        margin-top: 0px;
+        margin-bottom: 5px;
+      }
+      .profile-card .add-friend {
+        font-family: Arial, sans-serif;
+        padding: 10px 20px;
+        background-color: rgb(0, 81, 162);
+        color: white;
+        border: 1px, black;
+        font-size: 14px;
+        cursor: pointer;
+        display: block;
+        margin: 8px 8px auto 8px; /* Center the button horizontally */
+      }
+      .profile-card .add-friend:hover {
+        background-color: rgb(0, 62, 123);
+      }
+    </style>
+  </head>
+  <body>
+    <!--Ex.9a-->
+    <div class="red-square"></div>
+    
+    <!--Ex.9b-->
+    <div class="green-circle"></div>
+
+    <!--Ex.9d-->
+    <div class="install-YT-music">
+      <p class="Header1">Install YouTube Music</p>
+      <p class="Header2">
+        Add YouTube Music to your desktop for quick and easy access
+      </p>
+    </div>
+
+
+    <div class="profile-card-grid">
+      <!--Ex.9f-->
+      <div class="profile-card">
+        <img src="../thumbnails/thumbnail-1.webp" alt="Profile Thumbnail" class="thumbnail">
+        <p class="Header1">Oliver</p>
+        <p class="Header2">2 mutual friends</p>
+        <button class="add-friend">Add Friend</button>
+      </div>
+      <!--Ex.9g-->
+      <div class="profile-card">
+        <img src="../thumbnails/thumbnail-1.webp" alt="Profile Thumbnail" class="thumbnail">
+        <p class="Header1">Mimi</p>
+        <p class="Header2">3 mutual friends</p>
+        <button class="add-friend">Add Friend</button>
+      </div>
+      <div class="profile-card">
+        <img src="../thumbnails/thumbnail-1.webp" alt="Profile Thumbnail" class="thumbnail">
+        <p class="Header1">Rex</p>
+        <p class="Header2">4 mutual friends</p>
+        <button class="add-friend">Add Friend</button>
+      </div>
+    </div>
+  </body>
+
+</html>

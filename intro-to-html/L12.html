@@ -1,0 +1,233 @@
+<!DOCTYPE! html>
+<html lang="en">
+  <head>
+    <title>Flexbox Practice VS Grids</title>
+    <style>
+      .Ex-12a {
+        display: flex;
+        flex-direction: row;
+      }
+      .Ex-12b {
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+      }
+      .Ex-12c {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /* Distributes items evenly */
+        margin-top: 30px;
+      }
+      .Ex-12d {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 50px;
+        border: 1px solid black;
+        margin-top: 30px;
+      }
+
+      .Ex-12a-grid {
+        display: grid;
+        grid-template-columns: 200px 75px; /* Creates two columns */
+        gap: 0px; /* Space between grid items */
+        margin-top: 30px;
+      }
+      .Ex-12b-grid {
+        display: grid;
+        grid-template-columns: 50px 1fr 50px; /* Three equal columns */
+        gap: 0px; /* Space between grid items */
+        margin-top: 30px;
+      }
+      .Ex-12c-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 50px); /* Four equal columns */
+        justify-content: space-between;
+        gap: 0px; /* Space between grid items */
+        margin-top: 30px;
+      }
+      .Ex-12d-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 50px); /* Two equal columns */
+        justify-content: space-between;
+        gap: 0px; /* Space between grid items */
+        height: 50px;
+        border: 1px solid black;
+        margin-top: 30px;
+      }
+      .Ex-12f {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        justify-items: center;
+        background-color: rgb(74, 47, 74);
+        padding: 10px;
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .search-bar {
+        min-width: 400px;
+        height: 30px;
+        border-radius: 50px;
+        border: none;
+        padding: 15px;
+        font-size: 14px;
+        background-color: white;
+        color: gray;
+      }
+
+    </style>
+  </head>
+  <body>
+    <p>Flexbox Practice</p>
+    <div class="Ex-12a"> <!--Ex.12a-->
+      <div style="
+        background-color: lightblue;
+        width: 200px;">
+        200px
+      </div>
+      <div style="
+        background-color: lightpink;
+        width: 75px;">
+        75px
+      </div>
+    </div>
+
+    <div class="Ex-12b"> <!--Ex.12b-->
+      <div style="
+        background-color: lightblue;
+        width: 50px;">
+        item 1
+      </div>
+      <div style="
+        background-color: lightpink;
+        flex: auto;">
+        item 2
+      </div>
+      <div style="
+        background-color: lightblue;
+        width: 75px;">
+        item 3
+      </div>
+    </div>
+
+    <div class="Ex-12c"> <!--Ex.12c-->
+      <div style="
+        background-color: lightpink;
+        width: 50px;">
+        item 1
+      </div>
+      <div style="
+        background-color: lightpink;
+        width: 50px">
+        item 2
+      </div>
+      <div style="
+        background-color: lightpink;
+        width: 50px;">
+        item 3
+      </div>
+      <div style="
+        background-color: lightpink;
+        width: 50px">
+        item 4
+      </div>
+    </div>
+
+    <div class="Ex-12d"> <!--Ex.12d-->
+      <div style="
+        background-color: lightpink;
+        width: 50px;">
+        item 1
+      </div>
+      <div style="
+        background-color: lightpink;
+        width: 50px;">
+        item 2
+      </div>
+    </div>
+
+    <p style="margin-top:60px;">Grid Practice</p>
+    <div class="Ex-12a-grid">
+      <div style="
+        background-color: lightblue;">
+        item 1
+      </div>
+      <div style="
+        background-color: lightpink;">
+        item 2
+      </div>
+    </div>
+
+    <div class="Ex-12b-grid">
+      <div style="
+        background-color: lightblue;">
+        item 1
+      </div>
+      <div style="
+        background-color: lightpink;">
+        item 2
+      </div>
+      <div style="
+        background-color: lightblue;">
+        item 3
+      </div>
+    </div>
+
+    <div class="Ex-12c-grid">
+      <div style="
+        background-color: lightpink;">
+        item 1
+      </div>
+      <div style="
+        background-color: lightpink;">
+        item 2
+      </div>
+      <div style="
+        background-color: lightpink;">
+        item 3
+      </div>
+      <div style="
+        background-color: lightpink;">
+        item 4
+      </div>
+    </div>  
+
+    <div class="Ex-12d-grid">
+      <div style="
+        background-color: lightpink;">
+        item 1
+      </div>
+      <div style="
+        background-color: lightpink;">
+        item 2
+      </div>
+    </div>
+
+    <div class= "Ex-12f">
+      <div>
+        <button style="
+          font-weight: bold;
+          color: white;
+          background-color: transparent;
+          border: none;">
+          Home</button>
+      </div>
+      <div>
+        <input class="search-bar" type="text" placeholder="Search">
+      </div>
+      <div>
+        <button style="
+          border: 1px solid white;
+          color: white;
+          background-color: transparent;
+          padding: 8px 15px;"> <!-- Added padding --> 
+          Download
+        </button>
+      </div>
+    </div>
+
+
+  </body>
+</html>

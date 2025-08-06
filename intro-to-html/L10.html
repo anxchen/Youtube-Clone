@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>More Divs Practice</title>
+    <style>
+      .p {
+        margin: 0px;
+      }      
+
+      .profile-card {
+        display: block;
+        width: 150px;
+        background-color: white;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-bottom: 8px;
+      }
+      .thumbnail-container {
+        display: block;
+        width: 150px;
+        height: 150px;
+        margin-bottom: 8px;
+      }
+
+      .thumbnail {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+      }
+
+      .profile-info {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: black;
+        font-style: bold;
+        text-align: left;
+        padding-left: 8px;
+      } 
+      .Header1 {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: black;
+        margin-top: 0px;
+        margin-bottom: 5px;
+      }
+
+      .mutual-friends {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+      }
+
+      .mutual-friend-picture {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-right: 5px;
+      }
+
+      .mutual-friend-text {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        color: gray;
+        display: inline-block;
+        margin: 0px;
+      }
+
+      .add-friend {
+        font-family: Arial, sans-serif;
+        padding-left: 8px;
+        background-color: rgb(0, 81, 162);
+        color: white;
+        border: 1px, black;
+        font-size: 14px;
+        cursor: pointer;
+        display: block;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+      }
+      .add-friend:hover {
+        background-color: rgb(0, 62, 123);
+      }
+      
+    </style>
+  </head>
+  
+  <body>
+    
+      <!--Ex.9f-->
+    <div class="profile-card">
+      <div class="thumbnail-container">
+        <img src="../thumbnails/thumbnail-1.webp" alt="Profile Thumbnail" class="thumbnail">
+      </div>
+
+      <div class="profile-info">
+        <p class="Header1">Oliver</p>
+        
+        <div class="mutual-friends">
+          <img src="../profile-pictures/profile-picture-1.jpeg" alt="Profile Picture" class="mutual-friend-picture">
+          <p class="mutual-friend-text">2 mutual friends</p>
+        </div>
+
+        <button class="add-friend">Add Friend</button>
+      </div>
+    </div>
+    
+  </body>
+</html>

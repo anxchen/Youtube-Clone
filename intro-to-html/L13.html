@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nested Flexbox</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <style>
+    p {
+      margin: 0px;
+    }
+    h1 {
+      margin: 0px;
+    }
+    body {
+      height: 3000px;
+    }
+
+    .parent-container { /* Ex.13 a-b */
+      display: flex;
+      flex-direction: row;
+      height: 100px; /* "vh" Full viewport height */
+    }
+    .container-1 {
+      background-color: lightpink;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    #item1 {
+      background-color: black;
+      color: white;
+    }
+    .container-2 {
+      background-color: lightblue;
+      width: 200px;
+      height: 100px;
+    }
+    #row1 {
+      display: flex;
+      background-color: lightgreen;
+    }
+    .row2 {
+      display: flex;
+      justify-content: space-between;
+      background-color: coral;
+      margin-top: 20px;
+    }
+
+
+    .inbox-container p,h1,h2 {
+      font-family: Roboto, Arial;
+    }
+    .inbox-container { /* Ex.13c */
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      width: 380px;
+      row-gap: 10px;
+      margin-top: 50px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.5);
+      border-radius: 2px;
+      padding-bottom: 15px;
+    }
+    #all-inboxes-title {
+      color: gray;
+      font-size: 12px;
+      font-family: Roboto, Arial;
+      padding-left: 10px;
+      padding-top: 10px;
+      display: block;
+    }
+    .message-card {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      padding-bottom: 10px;
+    }
+    .profile-picture {
+      width: 40px;
+      border-radius: 20px;
+    }
+    .profile-picture-card {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .text-stack {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .header {
+      display:flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+    .message-sender {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .time {
+      color: gray;
+      font-size: 12px;
+    }
+    .subtext {
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 0px;
+      margin-bottom: 5px;
+    }
+    .text {
+      font-size: 14px;
+      color: gray;
+    }
+
+    .close-button {
+      background-color: gray;
+      color: white;
+      position: absolute;
+      font-family: Arial;
+      font-size: 16px;
+      padding: 4px 9px;
+      border-radius: 22px;
+      top: 15px;
+      right: 15px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+    }
+    .close-button:hover {
+      background-color: rgb(90, 90, 90);
+      cursor: pointer;
+      box-shadow: none;
+    }
+
+    .item-2 {
+      width: 320px;
+      height: 180px;
+      background-color: gray;
+      position: fixed;
+      bottom: 0px;
+      right: 0px;
+    }
+    .video-close-button {
+      background-color: rgb(0, 0, 0);
+      color: white;
+      position: absolute;
+      font-family: Arial;
+      font-size: 16px;
+      padding: 4px 9px;
+      border-radius: 22px;
+      top: -8px;
+      left: -8px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+    }
+    .video-close-button:hover {
+      background-color: rgb(90, 90, 90);
+      cursor: pointer;
+      box-shadow: none;
+    }
+    .video-time {
+      position: absolute;
+      bottom: 8px;
+      right: 10px;
+      background-color: black;
+      color: white;
+      font-size: 14px;
+      padding: 3px 5px;
+    }
+
+    /* Ex. 15e */
+    .shop-container {
+      display: inline-block;
+      position: relative;
+      margin: 50px 50px 100px;
+      width: 200px;
+      height: 235px;
+    }
+    .clothing-img {
+      width: 100%;
+    }
+    .sale {
+      position: absolute;
+      top: 6px;
+      right: 0px;
+      background-color: black;
+      color: white;
+      padding: 6px 12px;
+      font-family: Roboto, Arial;
+      font-size: 16px;
+    }
+    .bottom-overlay {
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 200px;
+      height: 80px;
+      position: absolute;
+      bottom: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .add-to-cart-button {
+      z-index: 2;
+      font-size: 12px;
+      padding: 6px 10px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: black;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <div class="close-button"> <!-- Ex. 15a -->
+    x
+  </div>
+  <div class="close-button"> <!-- Ex. 15a -->
+    x
+  </div>
+  <div class="item-2">
+    <div class="video-close-button"> <!-- Ex. 15c -->
+     x
+    </div>
+    <div class="video-time">
+      15:02
+    </div>
+  </div>
+
+  <div class="shop-container"> <!-- Ex. 15e -->
+    <div class="sale">20% OFF</div>
+    <img class="clothing-img" src="../profile-pictures/Green-halter.png" alt="green halter top"> 
+    <div class="bottom-overlay">
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+  </div> 
+
+  <div class="parent-container"> <!-- Ex.13 a-b -->
+    <div class="container-1">
+      <div id="item1">item 1</div>
+    </div> 
+    <div class="container-2">
+      <div id="row1">row 1</div>
+      <div class="row2">
+        <div style="
+        margin:0;
+        ">item 1</div>
+        <div style="
+        margin:0;
+        ">item 2</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="inbox-container"> <!--Ex.13c-->
+    <p id="all-inboxes-title">ALL INBOXES</p>
+    <div class="message-card">
+      <div class="profile-picture-card">
+        <img class="profile-picture" src="../profile-pictures/my-channel.jpeg">
+      </div>
+      <div class="text-stack">
+        <div class="header">
+          <h1 class="message-sender">Chewy Promotions</h1>
+          <p class="time">4:58 PM</p>
+        </div>
+        <div>
+          <h2 class="subtext">Biggest sales of the year!</h2>
+        </div>
+        <div>
+          <p class="text">Hey there! We're writing to tell you about our...</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="message-card">
+      <div class="profile-picture-card">
+        <img class="profile-picture" src="../profile-pictures/my-channel.jpeg">
+      </div>
+      <div class="text-stack">
+        <div class="header">
+          <h1 class="message-sender">Chewy Promotions</h1>
+          <p class="time">4:58 PM</p>
+        </div>
+        <div>
+          <h2 class="subtext">Biggest sales of the year!</h2>
+        </div>
+        <div>
+          <p class="text">Hey there! We're writing to tell you about our...</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="message-card">
+      <div class="profile-picture-card">
+        <img class="profile-picture" src="../profile-pictures/my-channel.jpeg">
+      </div>
+      <div class="text-stack">
+        <div class="header">
+          <h1 class="message-sender">Chewy Promotions</h1>
+          <p class="time">4:58 PM</p>
+        </div>
+        <div>
+          <h2 class="subtext">Biggest sales of the year!</h2>
+        </div>
+        <div>
+          <p class="text">Hey there! We're writing to tell you about our...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
